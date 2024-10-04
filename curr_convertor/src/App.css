@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
+    url(assets/background.jpg);
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__box {
+  width: 500px;
+  height: fit-content;
+  padding: 3rem;
+  border-radius: 25px;
+  backdrop-filter: blur(10px) brightness(110%);
+  transition: box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container__box:hover {
+  box-shadow: 1px 1px 25px #1e1258, 1px 2px 30px black;
+}
+
+.swap, .convert{
+  display: flex;
+  justify-content: center;
+  margin: -4px 0;
+}
+
+.swap button{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.convert{
+    margin: 15px;
+    margin-bottom: -15px;
+}
+
+.convert button{
+    padding: 0.5rem 2rem;
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.convert button:hover, .swap button:hover{
+    background-color: rgba(0, 0, 255, 0.7);
+}

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+body {
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.2)),
+    url(./assets/background.png);
+  background-size: cover;
+}
+
+/* App.jsx */
+
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.container h1 {
+  font-size: max(5vw, 2.5rem);
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: max(3rem, 3vh);
+}
+
+.container .list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.line-break {
+  width: min(70vw, 700px);
+  height: 2px;
+  background-color: #fff;
+  margin: 2rem auto;
+}
+
+.list .item {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TodoForm.jsx */
+
+.todoForm {
+  width: 100%;
+  text-align: center;
+}
+
+.todoForm input {
+  width: min(60vw, 600px);
+  padding: min(2vw, 1rem);
+  font-size: min(1rem, 3vw);
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #01090a;
+  color: white;
+}
+
+.todoForm input:focus {
+  outline: none;
+}
+button {
+  padding: min(2vw, 1rem);
+  font-size: min(1rem, 3vw);
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #0e423d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+button:hover {
+  background-color: #57967c;
+}
+
+/* TodItem.jsx */
+
+.todoItem {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check {
+  display: none;
+}
+.toggle {
+  width: min(5vw, 2rem);
+  height: min(5vw, 2rem);
+  margin-right: 10px;
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.check:checked + .toggle {
+  background-color: #01090a;
+}
+
+.todoItem #msg {
+  width: min(50vw, 550px);
+  padding: min(2vw, 1rem);
+  font-size: min(1rem, 3vw);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  background-color: #01090a;
+  color: white;
+}
+
+.todoItem .edit {
+  border-radius: 0px;
+}
+
+.todoItem .delete {
+  background-color: #01090a;
+  font-size: min(0.9rem, 2.36vw);
+}
+
+.delete:hover {
+  filter: hue-rotate(90deg);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+  .todoForm input,
+  .todoItem #msg {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  button,
+  .todoItem .delete {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .toggle {
+    width: 2rem;
+    height: 2rem;
+  }
+}

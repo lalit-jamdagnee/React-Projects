@@ -1,0 +1,150 @@
+.main{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display:flex;
+}
+.sidebar{
+  width:10%;
+  height:100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(assets/sidebar.jpg);
+  background-size: cover;
+  box-shadow: inset 2px 2px 10px black,
+              2px 2px 10px whitesmoke,
+              2px 3px 15px black;
+}
+.container{
+  width:80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elements{
+  width:fit-content;
+  height:fit-content;
+  padding: 3rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  background: linear-gradient(rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.50)), url(assets/container.jpg);
+  background-size: cover;
+  border-radius: 50px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.elements:hover{
+  box-shadow: 1px 2px 10px #013B59,
+  1px 3px 15px #013B59;
+}
+h1{
+  font-size: 2.7rem;
+  white-space: nowrap;
+  font-family: Verdana;
+  margin-bottom: 20px;
+}
+.password__container{
+  display:flex;
+  gap:10px;
+  margin-bottom: 10px;
+}
+.pass_input{
+  font-size: 25px;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color:#7F2300;
+}
+button{
+  padding: 1rem;
+  font-size: 15px;
+  border: none;
+  color: whitesmoke;
+  background-color:#7F2300;
+  border-radius: 15px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+button:hover{
+  transform: scale(1.1);
+  box-shadow: 1px 1px 3px #e14000;
+}
+
+.option{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option__container1, .option__container2{
+  padding: 1rem;
+  display:flex;
+  justify-content:space-between;
+  gap: 20px;
+}
+.option__container1 label{
+  display: block;
+  font-size: 1.5rem;
+}
+.cursor_pointer{
+  display:block;
+  transform:scale(1.1);
+}
+
+.option__container2{
+  justify-content: center;
+}
+
+.option__container2 input{
+  display:block;
+  transform: scale(2);
+}
+.option__container2 label{
+  display: block;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 750px){
+  .main{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .sidebar{
+    width: 100%;
+    height: 10%;
+  }
+  .container{
+    width:100%;
+  }
+  .elements{
+    width: 90%;
+  }
+  h1{
+    font-size: 1.7rem;
+  }
+  .pass_input{
+    font-size: 15px;
+    padding: 0.5rem;
+  }
+  button{
+    padding: 0.5rem;
+    font-size: 15px;
+  }
+  
+  .option__container1, .option__container2{
+    padding: 1rem;
+    display:flex;
+    justify-content:center;
+    gap: 10px;
+  }
+  .option__container1 label{
+    font-size: 1.1rem;
+  }
+  .cursor_pointer{
+    transform:scale(1);
+  }
+  
+  .option__container2 input{
+    transform: scale(1);
+  }
+  .option__container2 label{
+    font-size: 1.1rem;
+  }
+}
